@@ -1,0 +1,156 @@
+
+.container {
+    display: flex;
+    margin: 30px 0 auto;
+    font-family: 'Roboto Mono', monospace;
+    
+}
+.box {
+    display: relative;
+    margin: 0 auto;
+    white-space: normal;
+    padding: 30px 30px 5px 30px;
+    border: solid 1px #ececec;
+    border-radius: 15px;
+    font-size: 13px;
+    background: #ffffff; 
+   
+}
+.search-city {
+    display: block;
+    text-align: left;
+    padding: 15px 0;
+}
+.search {
+    border: 1px solid #272343;
+    border-radius: 10px;
+}
+
+.location-button {
+    display: block;
+    margin-top: 10px;
+   
+}
+
+.search-button,
+.location-button {
+   
+    background-color: #272343;
+    color: #ffffff;
+    border: 0px none;
+    border-radius: 10px;
+    transition: all 200ms ease-in-out;
+    box-shadow: 0 0.5px 0.5px 0.5px #272343;
+}
+.search-button:hover,
+.location-button:hover {
+    color: #000;
+    background-color: #bae8e8;
+    cursor: pointer;
+}
+
+.current {
+    display: flex;
+    padding: 15px 0;
+}
+
+.current-weather {
+    display: inline-block;
+    font-size: 35px;
+    font-weight: bold;
+    
+}
+.current-weather-units {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 6px;
+    padding-left: 6px;
+    vertical-align: top;  
+}
+
+.celsium, 
+.fahrenheit
+ {
+    color:#000;
+    text-decoration: none;
+    transition: all 200ms ease-in-out;
+} 
+.celsium:hover, 
+.fahrenheit:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+.current-data {
+    font-weight: bold;
+}
+
+.details {
+    text-align: left;
+    overflow: auto;
+}
+.days {
+    text-align: center;
+    overflow: auto;
+}
+.card {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+
+   
+}
+.card-body {
+    background-color: #ffffff;
+    box-shadow: 0 0.5px 0.5px 0.5px #9fd3c7;
+    transition: all 200ms ease-in-out;
+    border-radius: 10px;
+}
+.card-body:hover {
+    transform: scale(1.1);
+
+}
+.card-title {
+    font-size: 15px;
+}
+.card-text {
+    font-size: 11px;
+}
+.card img {
+    width: 40px;
+    margin-bottom: 10px;
+}
+.btn-days {
+    display: block;
+    margin: 0 auto;
+    width: 40px;
+    height: 20px;
+    font-size: 7px;
+}
+
+.btn-days {
+    background-color: #272343;
+    color: #ffffff;
+    border: 0px none;
+    border-radius: 10px;
+    transition: all 200ms ease-in-out;
+    box-shadow: 0 0.5px 0.5px 0.5px #272343;
+}
+.btn-days:hover {
+   color: #000;
+   background-color: #bae8e8;
+   cursor: pointer; 
+}
+.credits {
+    padding-top: 10px;
+    padding-bottom: 0;
+    font-size: 10px;
+    text-decoration: none;
+    color: black;
+}
+.credits a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
