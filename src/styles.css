@@ -1,6 +1,6 @@
 
 .container {
-    display: flex;
+    display: grid;
     margin: 30px 0 auto;
     font-family: 'Roboto Mono', monospace;
     
@@ -143,7 +143,9 @@
    cursor: pointer; 
 }
 .credits {
+    display: block;
     margin-top: 10px;
+    margin-left: 275px;
     font-size: 10px;
     text-decoration: none;
     color: black;
@@ -153,7 +155,6 @@
     color: #000;
 
 }
-
 .credits-link a:hover {
     text-decoration: underline;
     color: blue;
