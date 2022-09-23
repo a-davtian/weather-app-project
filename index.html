@@ -20,8 +20,10 @@
     <title>Weather App</title>
   </head>
   <body>
-    <div class="container">
-     <div class="box">
+<div class="container">
+
+     <div class="weather-container">
+
       <div class="search-city">
        <form id="search-city-form">
         <input type="text" class="search" id="current-city-input" placeholder=" Type a city..." size="30"></input>
@@ -29,11 +31,13 @@
              </form>  
             <button type="click" class="location-button" id="current-location-btn">Locate me</button> 
         </div>
+
          <div class="row current">
             <div class="col-6 current-weather"><span class="city" id="now-city">Kyiv</span>,<span id="now-country">UA</span></div>
             <div class="col-3 current-data"><span class="status" id="now-status">partly cloudy</span></br>26 °C / 15 °C</div>
             <div class="col-3 current-data" id="now-date">Sun, August 21</br>20:23</div>
          </div>
+
     <div class="row details">
         <div class="col-3 current-weather"><span id="now-temp">25</span>
         <span class="current-weather-units">
@@ -43,6 +47,7 @@
         <div class="col-3 details"><img src="image/wind.png" alt="wind" width="30"> Wind <span id="wind">11</span> km/h</br><img src="image/humidity.png" alt="humidity" width="30"> Humidity <span id="humidity"> 61</span> %</div>
         <div class="col-3 details"><img src="image/sunrise.png" alt="humidity" width="30"> Sunrise 06:01</br><img src="image/sunset.png" alt="humidity" width="30"> Sunset 19:57</div>
     </div>
+
     <div class="row days">
   <div class="col">
     <div class="card">
@@ -95,7 +100,9 @@
     </div>
   </div>
   </div>
-   <div class="credits">Weather animated icons created by <a href="https://www.flaticon.com/free-animated-icons/weather" title="weather animated icons" class="credits" target="_blank">Freepik-Flaticon</a></div>
+   <div class="credits">Weather animated icons created by <a href="https://www.flaticon.com/free-animated-icons/weather" title="weather animated icons" class="credits-link" target="_blank">Freepik-Flaticon</a></div>
+  <div class="credits"><a href="https://github.com/a-davtian/weather-app-project.git" title="open-source" class="credits-link" target="_blank">Open-source code</a> Asia Davtian</div>
+  </div>
 </div>
     <script src="src/index.js"></script>   
 </body>
