@@ -1,13 +1,12 @@
 .container {
   display: block;
+  max-width: 650px;
   margin: 0 auto;
   margin-top: 30px;
-  width: fit-content;
   font-family: "Roboto Mono", monospace;
 }
 .weather-container {
   display: block;
-  margin: 0 auto;
   white-space: normal;
   padding: 30px 30px 5px 30px;
   border: solid 1px #ececec;
@@ -46,9 +45,17 @@
 
 .current-weather {
   display: inline-block;
+  margin-top: 10px;
   font-size: 35px;
   font-weight: bold;
 }
+
+.details {
+  margin-top: 20px;  
+  text-align: left;
+  overflow: auto;
+}
+
 .current-weather-units {
   display: inline-block;
   font-size: 16px;
@@ -70,20 +77,12 @@
   text-decoration: underline;
 }
 
-.current-data {
-  font-weight: bold;
-}
-
-.details {
-  text-align: left;
-  overflow: auto;
-}
 .days {
   text-align: center;
   overflow: auto;
 }
 .card {
-  margin-top: 50px;
+  margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 10px;
 }

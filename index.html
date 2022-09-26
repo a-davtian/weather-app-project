@@ -22,30 +22,36 @@
   <body>
 <div class="container">
 
-     <div class="weather-container">
+  <div class="weather-container">
 
-      <div class="search-city">
-       <form class="float-left" id="search-city-form">
+    <div class="search-city">
+      <form class="float-left" id="search-city-form">
         <input type="text" class="search" id="current-city-input" placeholder=" Type a city..." size="30"></input>
         <input type="submit" class="search-button" id="current-city-btn" value="Search">
          <button type="click" class="location-button" id="current-location-btn">Locate me</button> 
-             </form>  
-      </div>
-
-         <div class="row current">
-            <div class="col-6 current-weather"><span class="city" id="now-city">Kyiv</span>,<span id="now-country">UA</span></div>
-            <div class="col-3 current-data"><span class="status" id="now-status">partly cloudy</span></br>26 °C / 15 °C</div>
-            <div class="col-3 current-data" id="now-date">Sun, August 21</br>20:23</div>
-         </div>
+      </form>  
+    </div>
+      
+    <div class="row current">
+      <div class="col-6 current-weather">
+        <span id="img-current"><img src="image/cloudy.gif" alt="cloudy" width="50"></span>
+        <span id="now-temp">25</span><span class="current-weather-units">
+        <a href="#" class="celsium" id="celsium-link">°C</a>|<a href="#" class="fahrenheit" id="fahrenheit-link">°F</a></span>
+        </div>
+      <div class="col-6 current-weather"><span class="city" id="now-city">Kyiv</span>,<span id="now-country">UA</span>
+        </div>  
+    </div>
+    
+    <div class="row current">
+      <div class="col-6 current-data"><span class="status" id="now-status">partly cloudy</span>, 26°C/15°C</div>
+      <div class="col-6 current-data" id="now-date">Sun, August 21 20:23</div>
+    </div>
 
     <div class="row details">
-        <div class="col-3 current-weather"><span id="now-temp">25</span>
-        <span class="current-weather-units">
-          <a href="#" class="celsium" id="celsium-link">°C</a>|<a href="#" class="fahrenheit" id="fahrenheit-link">°F</a> 
-        </span></div>
-        <div class="col-3 img-current"> <img src="image/cloudy.gif" alt="cloudy" width="50"></div>
-        <div class="col-3 details"><img src="image/wind.png" alt="wind" width="30"> Wind <span id="wind">11</span> km/h</br><img src="image/humidity.png" alt="humidity" width="30"> Humidity <span id="humidity"> 61</span> %</div>
-        <div class="col-3 details"><img src="image/sunrise.png" alt="humidity" width="30"> Sunrise 06:01</br><img src="image/sunset.png" alt="humidity" width="30"> Sunset 19:57</div>
+      <div class="col-3 details">Wind <span id="wind">11</span> km/h</div>
+      <div class="col-3 details">Humidity <span id="humidity"> 61</span> %</div>
+      <div class="col-3 details">Sunrise 06:01</div>
+      <div class="col-3 details">Sunset 19:57</div>
     </div>
 
     <div class="row days">
@@ -55,7 +61,6 @@
         <h5 class="card-title">Mon</h5>
         <p class="card-text">24 °C / 15 °C</p>
          <img src="image/sun.gif" class="card-img-bottom" alt="sun">
-         <button class="btn-days">More</button>
       </div>
     </div>
   </div>
@@ -65,7 +70,6 @@
         <h5 class="card-title">Thu</h5>
         <p class="card-text">21 °C / 14 °C</p>
          <img src="image/cloudy.gif" class="card-img-bottom" alt="cloudy">
-          <button class="btn-days">More</button>
       </div>
     </div>
   </div>
@@ -75,7 +79,6 @@
         <h5 class="card-title">Wed</h5>
         <p class="card-text">25 °C / 15 °C</p>
          <img src="image/rain.gif" class="card-img-bottom gif" alt="rain">
-          <button class="btn-days">More</button>
       </div>
     </div>
   </div>
@@ -85,7 +88,6 @@
         <h5 class="card-title">Thu</h5>
         <p class="card-text">25 °C / 16 °C</p>
          <img src="image/storm.gif" class="card-img-bottom" alt="thunderstorm" >
-           <button class="btn-days">More</button>
       </div>
     </div>
   </div>
@@ -95,7 +97,6 @@
         <h5 class="card-title">Fri</h5>
         <p class="card-text">24 °C / 13 °C</p>
          <img src="image/sun.gif" class="card-img-bottom" alt="sun">
-       <button class="btn-days">More</button>
       </div>
     </div>
   </div>
@@ -105,7 +106,7 @@
 <div class="credits">
     <small>Weather animated icons created by <a href="https://www.flaticon.com/free-animated-icons/weather" title="weather animated icons" class="credits-link" target="_blank">Freepik-Flaticon</a></small> 
    </br>
-    <small><a href="https://github.com/a-davtian/weather-app-project.git" title="open-source" class="credits-link" target="_blank">Open-source code</a> Asia Davtian</small>
+    <small><a href="https://github.com/a-davtian/weather-app-project.git" title="open-source" class="credits-link" target="_blank">Open-source code</a> by Asia Davtian</small>
   </div>
 </div>
     <script src="src/index.js"></script>   

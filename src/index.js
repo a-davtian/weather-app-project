@@ -31,7 +31,7 @@ function getCurrentDate() {
   let month = months[now.getMonth()];
 
   let nowDate = document.querySelector("#now-date");
-  nowDate.innerHTML = `${day}, ${month} ${date} <br> ${timeHou}:${timeMin} </br>`;
+  nowDate.innerHTML = `${day}, ${month} ${date}, ${timeHou}:${timeMin}`;
 }
 getCurrentDate();
 
