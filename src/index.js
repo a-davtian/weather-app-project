@@ -45,7 +45,7 @@ function changeWeatherData(response) {
   document.querySelector("#now-city").innerHTML = response.data.name;
   document.querySelector("#now-country").innerHTML = response.data.sys.country;
   document.querySelector("#now-status").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );

@@ -43,10 +43,18 @@
   cursor: pointer;
 }
 
+ul {
+    padding-left: 0;
+}
+
+li {
+    list-style: none;
+}
+
 .current-weather {
   display: inline-block;
   margin-top: 10px;
-  font-size: 35px;
+  font-size: 25px;
   font-weight: bold;
 }
 
