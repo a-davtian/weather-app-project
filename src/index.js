@@ -39,9 +39,10 @@ getCurrentDate();
 
 function changeWeatherData(response) {
   console.groupCollapsed(response.data);
-  document.querySelector("#now-temp").innerHTML = Math.round(
-    response.data.main.temp
-  );
+
+  defoultTempCel = response.data.main.temp;
+  document.querySelector("#now-temp").innerHTML = Math.round(defoultTempCel);
+
   document.querySelector("#now-city").innerHTML = response.data.name;
   document.querySelector("#now-country").innerHTML = response.data.sys.country;
   document.querySelector("#now-status").innerHTML =
@@ -89,6 +90,27 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(showCurrentLocation);
 }
 
+function changeTempFahrenheit(event) {
+  event.preventDefault();
+  let changeToFahrenheit = document.querySelector("#now-temp");
+  changeToFahrenheit.innerHTML = Math.round((defoultTempCel * 9) / 5 + 32);
+}
+
+let changeToFahrenheit = document.querySelector("#fahrenheit-link");
+changeToFahrenheit.addEventListener("click", changeTempFahrenheit);
+
+function changeTempCelsium(event) {
+  event.preventDefault();
+  let changeToCelsium = document.querySelector("#now-temp");
+  changeToCelsium.innerHTML = Math.round(defoultTempCel);
+}
+
+let changeToCelsium = document.querySelector("#celsium-link");
+changeToCelsium.addEventListener("click", changeTempCelsium);
+
+let defoultTempCel = null;
+
+
 let searchCity = document.querySelector("#search-city-form");
 searchCity.addEventListener("submit", getCityWeather);
 
@@ -97,20 +119,3 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 
 defaultSearchCity("Kyiv");
 
-//function changeTempFahrenheit(event) {
-// event.preventDefault();
-//let changeToFahrenheit = document.querySelector("#now-temp");
-//changeToFahrenheit.innerHTML = `77`;
-//}
-
-//let changeToFahrenheit = document.querySelector("#fahrenheit-link");
-//changeToFahrenheit.addEventListener("click", changeTempFahrenheit);
-
-//function changeTempCelsium(event) {
-//event.preventDefault();
-// let changeToCelsium = document.querySelector("#now-temp");
-// changeToCelsium.innerHTML = `25`;
-//}
-
-//let changeToCelsium = document.querySelector("#celsium-link");
-//changeToCelsium.addEventListener("click", changeTempCelsium);
