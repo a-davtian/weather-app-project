@@ -93,20 +93,25 @@ function getCurrentLocation(event) {
 function changeTempFahrenheit(event) {
   event.preventDefault();
   let changeToFahrenheit = document.querySelector("#now-temp");
+   //changeToCelsium.classList.remove("active");
+   //changeToFahrenheit.classList.add("active");
   changeToFahrenheit.innerHTML = Math.round((defoultTempCel * 9) / 5 + 32);
 }
 
-let changeToFahrenheit = document.querySelector("#fahrenheit-link");
-changeToFahrenheit.addEventListener("click", changeTempFahrenheit);
 
 function changeTempCelsium(event) {
   event.preventDefault();
+//changeToCelsium.classList.add("active");
+  //changeToFahrenheit.classList.remove("active");
   let changeToCelsium = document.querySelector("#now-temp");
   changeToCelsium.innerHTML = Math.round(defoultTempCel);
 }
 
 let changeToCelsium = document.querySelector("#celsium-link");
 changeToCelsium.addEventListener("click", changeTempCelsium);
+
+let changeToFahrenheit = document.querySelector("#fahrenheit-link");
+changeToFahrenheit.addEventListener("click", changeTempFahrenheit);
 
 let defoultTempCel = null;
 

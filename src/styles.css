@@ -73,16 +73,13 @@ li {
   vertical-align: top;
 }
 
-.celsium,
-.fahrenheit {
-  color: #000;
+.current-weather a {
   text-decoration: none;
-  transition: all 200ms ease-in-out;
 }
-.celsium:hover,
-.fahrenheit:hover {
+.current-weather .active {
   color: #000;
-  text-decoration: underline;
+  cursor: default;
+
 }
 
 .days {
