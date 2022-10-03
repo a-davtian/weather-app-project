@@ -35,7 +35,8 @@ function getCurrentDate() {
 }
 getCurrentDate();
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
@@ -56,6 +57,15 @@ forecastHTML =
 forecastHTML = forecastHTML + `</div`;
  forecastElement.innerHTML = forecastHTML;
  
+}
+
+function getForecast(coordinates) {
+
+  let apiKey = `&appid=40b745c14eadad7b7c4e6e4bf3b70103`;
+  let apiSite = `https://api.openweathermap.org/data/2.5/onecall?`;
+  let apiUnit = `&units=metric`;
+  let apiUrl = `${apiSite}lat=${coordinates.lat}&lon=${coordinates.lon}${apiKey}${apiUnit}`;
+ axios.get(apiUrl).then(displayForecast)
 }
 
 function changeWeatherData(response) {
@@ -81,6 +91,8 @@ function changeWeatherData(response) {
 
   //sunset
   //sunrice
+
+getForecast(response.data.coord);
 }
 
 function defaultSearchCity(city) {
@@ -143,4 +155,4 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 
 defaultSearchCity("Kyiv");
 
-displayForecast();
+
