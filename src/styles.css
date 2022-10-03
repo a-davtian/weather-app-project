@@ -20,6 +20,7 @@
   padding: 15px 0;
 }
 .search {
+   height: 30px;
   border: 1px solid #5c636e;
   border-radius: 5px;
 }
@@ -30,6 +31,8 @@
   color: #ffffff;
   border: 0px none;
   border-radius: 5px;
+  height: 30px;
+  padding: 5px;
   transition: all 200ms ease-in-out;
   box-shadow: 0 0.5px 0.5px 0.5px #393e46;
 }
@@ -94,55 +97,26 @@ text-decoration: none;
   color: #000;
 }
 
-.days {
+.weather-forecast {
   text-align: center;
-  overflow: auto;
-}
-.card {
-  margin-top: 15px;
+  margin-top: 20px;
   margin-bottom: 10px;
-  border-radius: 10px;
-}
-.card-body {
-  background-color: #ffffff;
-  box-shadow: 0 0.5px 0.5px 0.5px #9fd3c7;
-  transition: all 200ms ease-in-out;
-  border-radius: 10px;
-}
-.card-body:hover {
-  transform: scale(1.1);
-}
-.card-title {
-  font-size: 15px;
-}
-.card-text {
-  font-size: 11px;
-}
-.card img {
-  width: 40px;
-  margin-bottom: 10px;
-}
-.btn-days {
-  display: block;
-  margin: 0 auto;
-  width: 40px;
-  height: 20px;
-  font-size: 7px;
+  color: #000;
+  background-color: #f7f7f7;
 }
 
-.btn-days {
-  background-color: #272343;
-  color: #ffffff;
-  border: 0px none;
-  border-radius: 10px;
-  transition: all 200ms ease-in-out;
-  box-shadow: 0 0.5px 0.5px 0.5px #272343;
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.6;
 }
-.btn-days:hover {
-  color: #000;
-  background-color: #bae8e8;
-  cursor: pointer;
+.weather-forecast-temperetures {
+   font-size: 13px;
 }
+
+.weather-forecast-tempereture-min {
+  opacity: 0.6;
+}
+
 .credits {
   margin-top: 10px;
   margin-left: 5px;
