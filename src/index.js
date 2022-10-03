@@ -40,12 +40,11 @@ function forecastFormatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-
   return days[day];
 }
 
+
 function displayForecast(response) {
-  console.log(response.data);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   let forecast = response.data.daily;
@@ -75,6 +74,7 @@ forecastHTML = forecastHTML + `</div`;
  forecastElement.innerHTML = forecastHTML;
  
 }
+
 
 function getForecast(coordinates) {
 
@@ -106,11 +106,27 @@ function changeWeatherData(response) {
     "icon-current"
   ).src = `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`;
 
+let sunriseInput = response.data.sys.sunrise;
+let timestampRise = sunriseInput * 1000;
+
+let sunsetInput = response.data.sys.sunset;
+let timestampSet = sunsetInput * 1000;
+
+  document.querySelector("#sunrice").innerHTML = new Date(
+    timestampRise
+  ).toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
+  document.querySelector("#sunset").innerHTML = new Date(
+    timestampSet
+  ).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+
+    
+
   //sunset
   //sunrice
 
 getForecast(response.data.coord);
 }
+
 
 function defaultSearchCity(city) {
   let apiKey = `&appid=40b745c14eadad7b7c4e6e4bf3b70103`;
@@ -124,7 +140,6 @@ function getCityWeather(event) {
   event.preventDefault();
   let city = document.querySelector("#current-city-input").value;
 
-  //console.log(apiUrl);
   defaultSearchCity(city);
 }
 
