@@ -35,7 +35,28 @@ function getCurrentDate() {
 }
 getCurrentDate();
 
-// WEEK 5 HOME WORK
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
+days.forEach(function(day){
+forecastHTML =
+  forecastHTML +
+  `
+    <div class="col-2">
+      <div class="weather-forecast-date">${day}</div>
+      <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" width="42"/>
+      <div class="weather-forecast-temperetures">
+        <span class="weather-forecast-tempereture-max">20°</span>
+        <span class="weather-forecast-tempereture-min">10°</span>
+      </div>
+    </div>`;
+})
+
+forecastHTML = forecastHTML + `</div`;
+ forecastElement.innerHTML = forecastHTML;
+ 
+}
 
 function changeWeatherData(response) {
   console.groupCollapsed(response.data);
@@ -57,7 +78,7 @@ function changeWeatherData(response) {
   document.getElementById(
     "icon-current"
   ).src = `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`;
-  
+
   //sunset
   //sunrice
 }
@@ -93,15 +114,14 @@ function getCurrentLocation(event) {
 function changeTempFahrenheit(event) {
   event.preventDefault();
   let changeToFahrenheit = document.querySelector("#now-temp");
-   //changeToCelsium.classList.remove("active");
-   //changeToFahrenheit.classList.add("active");
+  //changeToCelsium.classList.remove("active");
+  //changeToFahrenheit.classList.add("active");
   changeToFahrenheit.innerHTML = Math.round((defoultTempCel * 9) / 5 + 32);
 }
 
-
 function changeTempCelsium(event) {
   event.preventDefault();
-//changeToCelsium.classList.add("active");
+  //changeToCelsium.classList.add("active");
   //changeToFahrenheit.classList.remove("active");
   let changeToCelsium = document.querySelector("#now-temp");
   changeToCelsium.innerHTML = Math.round(defoultTempCel);
@@ -115,7 +135,6 @@ changeToFahrenheit.addEventListener("click", changeTempFahrenheit);
 
 let defoultTempCel = null;
 
-
 let searchCity = document.querySelector("#search-city-form");
 searchCity.addEventListener("submit", getCityWeather);
 
@@ -124,3 +143,4 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 
 defaultSearchCity("Kyiv");
 
+displayForecast();
