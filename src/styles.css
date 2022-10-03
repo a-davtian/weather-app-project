@@ -1,6 +1,6 @@
 .container {
   display: block;
-  max-width: 650px;
+  max-width: 600px;
   margin: 0 auto;
   margin-top: 30px;
   font-family: "Roboto Mono", monospace;
@@ -20,7 +20,8 @@
   padding: 15px 0;
 }
 .search {
-   height: 30px;
+  height: 30px;
+  width: 370px;
   border: 1px solid #5c636e;
   border-radius: 5px;
 }
@@ -42,7 +43,7 @@
 .search-button:hover,
 .location-button:hover {
   color: #000;
-  background-color: #f8b500;
+  background-color: #EC6E4B;
   cursor: pointer;
 }
 
